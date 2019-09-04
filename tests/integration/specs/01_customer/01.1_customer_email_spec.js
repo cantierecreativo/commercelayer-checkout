@@ -22,8 +22,6 @@ describe('[01.1] customer / customer email', () => {
     })
   })
 
-  before(() => {})
-
   it('lets the customer add their email address', () => {
     cy.get('#customer-email').type('filippo@example.com')
     cy.get('#customer-step-submit').should('be.disabled')
