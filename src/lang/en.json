@@ -34,7 +34,11 @@
     "shipping_address": "Shipping address",
     "terms_of_service": "terms of service",
     "thankyou": "Thank you",
-    "thankyou_message": "Your order is confirmed and we'e getting it ready for shipment"
+    "thankyou_message": "Your order is confirmed and we'e getting it ready for shipment",
+    "is_italian_company": "I'm an italian company",
+    "partita_iva": "Partita IVA",
+    "pec": "PEC",
+    "sdi": "SDI"
   },
   "order_summary": {
     "coupon_code": "Have a coupon code?",

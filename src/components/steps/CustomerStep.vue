@@ -15,6 +15,7 @@
       <v-container>
         <CustomerFields />
         <BillingAddressFields />
+        <ItalianCompanyFields />
         <ShippingAddressFields />
       </v-container>
       <v-btn
@@ -52,6 +53,7 @@
 import { stepMixin } from '@/mixins/stepMixin'
 
 import CustomerFields from '@/components/fields/CustomerFields'
+import ItalianCompanyFields from '@/components/fields/ItalianCompanyFields'
 import BillingAddressFields from '@/components/fields/BillingAddressFields'
 import ShippingAddressFields from '@/components/fields/ShippingAddressFields'
 import AddressSummary from '@/components/summaries/AddressSummary'
@@ -62,6 +64,7 @@ import { mapFields } from 'vuex-map-fields'
 export default {
   components: {
     CustomerFields,
+    ItalianCompanyFields,
     BillingAddressFields,
     ShippingAddressFields,
     AddressSummary

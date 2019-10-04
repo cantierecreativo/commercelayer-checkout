@@ -34,7 +34,11 @@
     "shipping_address": "Indirizzo di consegna",
     "terms_of_service": "condizioni di vendita",
     "thankyou": "Grazie",
-    "thankyou_message": "Il tuo ordine è confermato e verrà preparato per la spedizione"
+    "thankyou_message": "Il tuo ordine è confermato e verrà preparato per la spedizione",
+    "is_italian_company": "Sono un'azienda italiana",
+    "partita_iva": "Partita IVA",
+    "pec": "PEC",
+    "sdi": "SDI"
   },
   "order_summary": {
     "coupon_code": "Hai un codice coupon?",

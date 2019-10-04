@@ -169,6 +169,10 @@ export const orderDefaults = order => {
       order.ship_to_different_address_required || false,
     shipments: [],
     payment_method: {},
-    payment_source: {}
+    payment_source: {},
+    is_italian_company: order.is_italian_company || false,
+    partiva_iva: order.partiva_iva || '',
+    pec: order.pec || '',
+    sdi: order.sdi || ''
   }
 }
