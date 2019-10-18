@@ -176,6 +176,15 @@ export default new Vuex.Store({
         .finally(() => {
           commit('updateButtonLoadingDelivery', false)
         })
+    },
+    setOrderMetaData ({ commit, state }) {
+      //to-do set meta data
+      return APIService.updateOrderMetaData(state.order).then(order => {
+        commit('updateOrder', order)
+        console.log('---------------- store setOrderMetaData state.order:', state.order)
+        console.log('---------------- store setOrderMetaData order:', order)
+        return order
+      })
     }
   }
 })

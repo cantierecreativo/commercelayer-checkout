@@ -324,6 +324,29 @@ const placeOrder = order => {
     })
 }
 
+const updateOrderMetaData = order => {
+  console.log('---------------- api updateOrderMetaData order:', order)
+  return apiClient
+    .patch('/orders/' + order.id + '?include=' + orderIncludes.join(','), {
+      data: {
+        type: 'orders',
+        id: order.id,
+        attributes: {
+          metadata: {
+            //to-do replace with real values
+            sample_key1: 'Sample value 1',
+            sample_key2: 'Sample value 2'
+          }
+        }
+      }
+    }).then(response => {
+      return normalizedOrder(order, response)
+    })
+    .catch(error => {
+      return Promise.reject(error.response)
+    })
+}
+
 export default {
   getOrder,
   updateOrderCustomerEmail,
@@ -333,5 +356,6 @@ export default {
   updateOrderPaymentMethod,
   createOrderPaymentSource,
   updateOrderPaymentSource,
-  placeOrder
+  placeOrder,
+  updateOrderMetaData
 }

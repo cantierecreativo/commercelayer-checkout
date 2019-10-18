@@ -48,7 +48,6 @@ import { mapFields } from 'vuex-map-fields'
 import { required, requiredIf } from 'vuelidate/lib/validators'
 
 export default {
-  mixins: [],
   computed: {
     ...mapFields([
       'validations.invalid_billing_address',

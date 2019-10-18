@@ -84,11 +84,14 @@ export default {
   methods: {
     submit () {
       this.loading_customer = true
-      this.$store.dispatch('setOrderAddresses').then(() => {
+      this.$store.dispatch('setOrderMetaData').then(() => {
+        this.$store.dispatch('setOrderAddresses')
+      }).then(() => {
         this.loading_customer = false
         this.nextStep()
       })
     }
+
   },
   mounted () {
     this.trackCheckoutStep('1')
