@@ -93,7 +93,11 @@ export const orderAttributes = [
   'cart_url',
   'privacy_url',
   'terms_url',
-  'return_url'
+  'return_url',
+  'is_italian_company',
+  'partita_iva',
+  'pec',
+  'sdi'
 ]
 
 export const addressAttributes = [
@@ -170,9 +174,6 @@ export const orderDefaults = order => {
     shipments: [],
     payment_method: {},
     payment_source: {},
-    is_italian_company: order.is_italian_company || false,
-    partiva_iva: order.partiva_iva || '',
-    pec: order.pec || '',
-    sdi: order.sdi || ''
+    is_italian_company: order.is_italian_company || false
   }
 }
