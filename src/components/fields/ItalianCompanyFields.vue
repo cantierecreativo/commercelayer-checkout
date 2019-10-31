@@ -45,17 +45,17 @@
 
 <script>
 import { mapFields } from 'vuex-map-fields'
-import { required, requiredIf } from 'vuelidate/lib/validators'
+import { requiredIf } from 'vuelidate/lib/validators'
 
 export default {
   computed: {
     ...mapFields([
       'validations.invalid_billing_address',
       'order.requires_billing_info',
-      'order.is_italian_company',
-      'order.partita_iva',
-      'order.pec',
-      'order.sdi'
+      'order.metadata.is_italian_company',
+      'order.metadata.partita_iva',
+      'order.metadata.pec',
+      'order.metadata.sdi'
     ])
   },
   validations: {
@@ -80,7 +80,7 @@ export default {
       this.$v[fieldName].$touch()
     },
     updateAddressInvalid () {
-      this.invalid_billing_address = 
+      this.invalid_billing_address =
         this.is_italian_company && this.$v.$invalid
     },
     errorMessages (fieldName) {
